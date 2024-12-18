@@ -1,14 +1,19 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
 export default $config({
-  app(input) {
+  app() {
     return {
-      name: "hostingnextjs",
-      removal: input?.stage === "production" ? "retain" : "remove",
+      name: "hostingnextjs-example",
       home: "aws",
+      providers: {
+        aws: {
+          region: "eu-central-1",
+          profile: "dev@nilsw.io",
+        },
+      },
     };
   },
   async run() {
-    new sst.aws.Nextjs("MyWeb");
+    new sst.aws.Nextjs("NextjsExample");
   },
 });
