@@ -8,7 +8,6 @@ export default $config({
       providers: {
         aws: {
           region: "eu-central-1",
-          profile: "dev@nilsw.io",
         },
       },
     };

@@ -1,0 +1,16 @@
+stages:
+  - deploy
+
+deploy:sst:
+  stage: deploy
+  image: node:22-alpine
+  variables:
+    - AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+  before_script:
+    - npm install -g pnpm
+  script:
+    - pnpm install
+    - sst deploy --stage=production
+  only:
+    - sst
