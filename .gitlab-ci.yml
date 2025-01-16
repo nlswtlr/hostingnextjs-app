@@ -11,6 +11,7 @@ deploy:sst:
     - npm install -g pnpm
   script:
     - pnpm install
+    - ./node_modules/.bin/sst install
     - ./node_modules/.bin/sst deploy --stage production --print-logs --verbose
   only:
     - sst
