@@ -3,6 +3,12 @@
 This is a Next.js application that shows the implementation of different providers for deploying Next.js.
 Based on the https://hostingnextjs.com project.
 
+## Fly.io
+
+Initialize your app via `fly launch`
+
+Deploy your app via `fly deploy`
+
 ## Providers
 
 | Provider     | Branch | Provider Link                                                        | Application Link                                           |
